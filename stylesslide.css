@@ -1,0 +1,149 @@
+:root{
+    --g1: linear-gradient(35deg, orange, rgb(255, 136, 0));
+}
+
+
+main{
+    margin-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-inline: 6vmin;
+}
+
+.carousel{
+    /* outline: 2px solid red; */
+    position: relative;
+    margin-top: 5vh;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    /* outline: 2px solid green; */
+    flex-direction: column;
+    padding: 5vmin;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+}
+
+.track{
+    /* outline: 2px solid blue; */
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+.card img{
+    border-radius: 15px;
+    width: 70vmin;
+    height: 40vmin;
+    aspect-ratio: 16/9;
+    margin-inline: auto;
+}
+
+.info{
+    margin-inline: auto;
+    width: 70vmin;
+}
+
+.info h2{
+    font-size: 1.4rem;
+}
+
+
+#left, #right{
+   display: none;
+}
+
+.info span{
+    background: rgba(255, 42, 0, 0.163);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0.4vmin;
+    border: rgb(255, 0, 0) 2px solid;
+    font-style: italic;
+}
+.cta{
+    padding: 1vmin 7vmin;
+    background: var(--g1);
+    font-weight: 900;
+    border-radius: 25px;
+    border: none;
+    margin-top: 2vmin;
+    margin-inline: auto;
+    display: flex;
+}
+
+
+@media (width>1000px) {
+    h1{
+        font-size: 3.2rem;
+    }
+    nav a{
+        font-size: 0.9rem;
+    }
+    .card{
+        flex-direction: row;        
+    }
+    .card img{
+        margin-inline: 0 auto;
+    }
+    .info{
+        margin-inline: auto 0;
+        text-align: right;
+    }
+    .info h2{
+        font-size: 2rem;
+    }
+    .cta{
+        font-size: 0.9rem;
+        border-radius: 5px;
+        padding: 1vmin 2vmin;
+    }
+    .carousel{
+        padding-bottom: 5vh;
+        overflow: hidden;
+    }
+    #left, #right{
+        background: var(--g1);
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        padding: 3vmin;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+    }
+    #left {
+        left: 70px;
+    }
+    #right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 999px) {
+    .track {
+        display: block;
+        /* transform: none !important;  */
+    }
+    .card {
+        min-width: 100%;
+        margin-bottom: 3vh;
+    }
+}
+
